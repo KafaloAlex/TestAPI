@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestAPI.MainPage">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Json Api" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand">
+                <Button Text="Users" BackgroundColor="CadetBlue" CornerRadius="5" x:Name="goToUserPage" Clicked="goToUserPage_Clicked"/>
+                <Button Text="Albums" BackgroundColor="CadetBlue" CornerRadius="5" x:Name="gotToAlbumPage" Clicked="gotToAlbumPage_Clicked"/>
+                <Button Text="User Albums" BackgroundColor="CadetBlue" CornerRadius="5" x:Name="gotToUserAlbumPage" Clicked="gotToUserAlbumPage_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

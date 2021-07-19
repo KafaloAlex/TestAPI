@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Test.Views.UserPage" Title="User List">
+
+
+    <ScrollView>
+        <StackLayout>
+
+            <SearchBar Placeholder="Id..." x:Name="search_bar"/>
+
+            <CollectionView x:Name="UserCollection">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Spacing="8" HorizontalOptions="EndAndExpand">
+                            <Frame Style="{StaticResource FrameCardViewStyle}">
+                                <StackLayout Margin="5" HorizontalOptions="FillAndExpand" Spacing="8">
+                                    <StackLayout Orientation="Horizontal" Spacing="8">
+                                        <Frame Style="{StaticResource profileImageFrameStyle}">
+                                            <Image Source="user.png" WidthRequest="80" HeightRequest="60" Aspect="AspectFit"/>
+                                        </Frame>
+                                        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="2">
+                                            <Label Text="{Binding name}" FontSize="18" FontAttributes="Bold" TextColor="Black" />
+                                            <Label Text="{Binding username}" FontSize="18" FontAttributes="Bold" TextColor="Black" />
+                                            <StackLayout Orientation="Horizontal">
+                                                <Image Source="phone.png" HeightRequest="8" WidthRequest="8"></Image>
+                                                <Label Text="{Binding phone}" FontSize="14" TextColor="DarkGray" />
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Image Source="mail.png" HeightRequest="8" WidthRequest="8"></Image>
+                                                <Label Text="{Binding email}" FontSize="14" TextColor="DarkGray" />
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Image Source="web.png" HeightRequest="8" WidthRequest="8"></Image>
+                                                <Label Text="{Binding website}" FontSize="14" TextColor="DarkGray" />
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+        
+        
+    </ScrollView>
+
+</ContentPage>

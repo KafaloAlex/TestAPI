@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Test.Views.AlbumPage" Title="Album List">
+    
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout>
+                
+                <SearchBar Placeholder="Id..." TextColor="White" x:Name="search_bar2"/>
+                
+                <ListView x:Name="AlbumCollection" BackgroundColor="#494848">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding id}" Detail="{Binding title}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

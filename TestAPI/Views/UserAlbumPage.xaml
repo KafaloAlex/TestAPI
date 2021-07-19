@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestAPI.Views.UserAlbumPage" Title="User Albums">
+    
+    <ScrollView>
+        <StackLayout>
+            <SearchBar Placeholder="User Id" x:Name="search_bar3" FontAttributes="Italic"/>
+
+            <ListView x:Name="UserAlbumCollection" BackgroundColor="#494848">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding id}" Detail="{Binding title}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>
